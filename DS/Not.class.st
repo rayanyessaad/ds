@@ -20,3 +20,10 @@ Not >> description [
               ifNotNil: [ entree shortDescription ]).
 
 ]
+
+{ #category : 'accessing' }
+Not >> entree: aComposant [
+    entree := aComposant
+
+
+]
