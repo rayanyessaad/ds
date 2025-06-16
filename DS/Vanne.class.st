@@ -20,3 +20,15 @@ Vanne >> description [
               ifNotNil: [ entree shortDescription ]).
 
 ]
+
+{ #category : 'accessing' }
+Vanne >> entree: comp [
+	entree := comp
+]
+
+{ #category : 'accessing' }
+Vanne >> state [
+	^ entree
+		ifNil:  false
+		ifNotNil: [ entree state ]
+]

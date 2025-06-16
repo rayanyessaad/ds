@@ -26,3 +26,19 @@ Porte2Entrees >> description [
               ifNotNil: [ entree2 shortDescription ]).
 
 ]
+
+{ #category : 'accessing' }
+Porte2Entrees >> entree1: comp [
+	entree1 := comp
+]
+
+{ #category : 'accessing' }
+Porte2Entrees >> entree2: comp [
+	entree2 := comp
+]
+
+{ #category : 'accessing' }
+Porte2Entrees >> entrees: comp1 et: comp2 [
+	entree1 := comp1.
+	entree2 := comp2
+]

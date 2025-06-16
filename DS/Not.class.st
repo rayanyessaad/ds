@@ -27,3 +27,11 @@ Not >> entree: aComposant [
 
 
 ]
+
+{ #category : 'accessing - structure variables' }
+Not >> state [
+    ^ entree isNil
+        ifTrue:  [ false ]               "entrée non branchée alors False"
+        ifFalse: [ (entree state) not ]  "sinon, inverse le signal"
+
+]
