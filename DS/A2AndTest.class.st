@@ -1,12 +1,12 @@
 Class {
-	#name : 'AAndTest',
+	#name : 'A2AndTest',
 	#superclass : 'TestCase',
 	#category : 'DS',
 	#package : 'DS'
 }
 
 { #category : 'accessing' }
-AAndTest >> testTableVerite [ [
+A2AndTest >> testTableVerite [ [
     | i1 i2 andGate |
 
     "Interrupteurs"

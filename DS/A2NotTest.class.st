@@ -1,12 +1,12 @@
 Class {
-	#name : 'ANotTest',
+	#name : 'A2NotTest',
 	#superclass : 'TestCase',
 	#category : 'DS',
 	#package : 'DS'
 }
 
 { #category : 'accessing' }
-ANotTest >> testInverseSignal [ [
+A2NotTest >> testInverseSignal [ [
     | sw notGate |
 
     sw := Interrupteur new.          "OFF → false"

@@ -1,12 +1,12 @@
 Class {
-	#name : 'AVanneTest',
+	#name : 'A2VanneTest',
 	#superclass : 'TestCase',
 	#category : 'DS',
 	#package : 'DS'
 }
 
 { #category : 'accessing' }
-AVanneTest >> testOuverture [ [
+A2VanneTest >> testOuverture [ [
     | sw v |
     sw := Interrupteur new.      "OFF → false"
     v  := Vanne new.

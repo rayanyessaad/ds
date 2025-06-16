@@ -1,19 +1,19 @@
 Class {
-	#name : 'AInterrupteurTest',
+	#name : 'A2InterrupteurTest',
 	#superclass : 'TestCase',
 	#category : 'DS',
 	#package : 'DS'
 }
 
 { #category : 'accessing' }
-AInterrupteurTest >> testEtatInitial [ [
+A2InterrupteurTest >> testEtatInitial [ [
     | i |
     i := Interrupteur new.
     self assert: i state equals: false      "doit être OFF par défaut"]
 ]
 
 { #category : 'accessing' }
-AInterrupteurTest >> testOnOff [ [
+A2InterrupteurTest >> testOnOff [ [
     | i |
     i := Interrupteur new.
 

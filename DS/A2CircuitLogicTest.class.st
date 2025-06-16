@@ -1,5 +1,5 @@
 Class {
-	#name : 'CircuitLogicTest',
+	#name : 'A2CircuitLogicTest',
 	#superclass : 'TestCase',
 	#instVars : [
 		'i1',
@@ -15,7 +15,7 @@ Class {
 }
 
 { #category : 'accessing' }
-CircuitLogicTest >> setUp [ [
+A2CircuitLogicTest >> setUp [ [
 	"Interrupteurs"
 	i1 := Interrupteur new.          "OFF"
 	i2 := Interrupteur new.          "OFF"
@@ -40,21 +40,21 @@ CircuitLogicTest >> setUp [ [
 ]
 
 { #category : 'accessing' }
-CircuitLogicTest >> testI1Seulement [ [
+A2CircuitLogicTest >> testI1Seulement [ [
 	i1 on.   "1 OR 0 = 1 ; NOT(0) = 1 ; AND = 1"
 	self assert: valve state equals: true
 ]
 ]
 
 { #category : 'accessing' }
-CircuitLogicTest >> testI2Seulement [ [
+A2CircuitLogicTest >> testI2Seulement [ [
 	i2 on.   "0 OR 1 = 1 ; NOT(0) = 1 ; AND = 1"
 	self assert: valve state equals: true
 ]
 ]
 
 { #category : 'accessing' }
-CircuitLogicTest >> testSecuriteBloque [ [
+A2CircuitLogicTest >> testSecuriteBloque [ [
 	i1 on.            "fait passer OR à 1"
 	securite on.      "NOT(1) = 0  → AND = 0"
 	self assert: valve state equals: false
@@ -62,14 +62,14 @@ CircuitLogicTest >> testSecuriteBloque [ [
 ]
 
 { #category : 'accessing' }
-CircuitLogicTest >> testTousLesDeux [ [
+A2CircuitLogicTest >> testTousLesDeux [ [
 	i1 on.  i2 on.    "1 OR 1 = 1 ; NOT(0) = 1 ; AND = 1"
 	self assert: valve state equals: true
 ]
 ]
 
 { #category : 'accessing' }
-CircuitLogicTest >> testTousOff [ [
+A2CircuitLogicTest >> testTousOff [ [
 	"0 OR 0 = 0 ; NOT(0) = 1 ; AND = 0 ⇒ vanne fermée"
 	self assert: valve state equals: false
 ]

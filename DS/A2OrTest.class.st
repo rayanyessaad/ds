@@ -1,12 +1,12 @@
 Class {
-	#name : 'AOrTest',
+	#name : 'A2OrTest',
 	#superclass : 'TestCase',
 	#category : 'DS',
 	#package : 'DS'
 }
 
 { #category : 'accessing' }
-AOrTest >> testTableVerite [ [
+A2OrTest >> testTableVerite [ [
     | i1 i2 orGate |
 
     "Interrupteurs OFF"
