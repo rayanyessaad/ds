@@ -20,6 +20,13 @@ Interrupteur >> evaluate [
 ]
 
 { #category : 'accessing' }
+Interrupteur >> initialize [
+    super initialize.
+    signal := false        "OFF par défaut"
+
+]
+
+{ #category : 'accessing' }
 Interrupteur >> off [
     signal := false
 
