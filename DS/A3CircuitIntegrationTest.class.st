@@ -1,5 +1,5 @@
 Class {
-	#name : 'CircuitIntegrationTest',
+	#name : 'A3CircuitIntegrationTest',
 	#superclass : 'TestCase',
 	#instVars : [
 		'circuit',
@@ -13,7 +13,7 @@ Class {
 }
 
 { #category : 'accessing' }
-CircuitIntegrationTest >> setUp [
+A3CircuitIntegrationTest >> setUp [
     "Construit exactement le circuit du sujet :"
 | orGate notGate andGate |
 [
@@ -45,7 +45,7 @@ CircuitIntegrationTest >> setUp [
 ]
 
 { #category : 'tests' }
-CircuitIntegrationTest >> testCollections [
+A3CircuitIntegrationTest >> testCollections [
     "Le circuit doit recenser correctement interrupteurs et vannes."
 [
     self assert: circuit interrupteurs size equals: 3.
@@ -54,7 +54,7 @@ CircuitIntegrationTest >> testCollections [
 ]
 
 { #category : 'tests' }
-CircuitIntegrationTest >> testComportementVanne [
+A3CircuitIntegrationTest >> testComportementVanne [
     "La logique : (i1 OR i2) AND ¬security."
 [
     "Tous OFF  → vanne fermée"

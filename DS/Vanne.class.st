@@ -27,6 +27,14 @@ Vanne >> entree: comp [
 ]
 
 { #category : 'accessing' }
+Vanne >> evaluate [
+    ^ entree
+        ifNil:    [ SignalBas new ]
+        ifNotNil: [ entree evaluate ].
+
+]
+
+{ #category : 'accessing' }
 Vanne >> state [
 	^ entree
 		ifNil:  false

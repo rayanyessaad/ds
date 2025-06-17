@@ -12,6 +12,14 @@ Class {
 }
 
 { #category : 'accessing' }
+Interrupteur >> evaluate [
+    ^ signal
+        ifTrue:  [ SignalHaut new ]
+        ifFalse: [ SignalBas new ].
+
+]
+
+{ #category : 'accessing' }
 Interrupteur >> off [
     signal := false
 

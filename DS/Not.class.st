@@ -28,6 +28,14 @@ Not >> entree: aComposant [
 
 ]
 
+{ #category : 'accessing' }
+Not >> evaluate [
+    ^ entree
+        ifNil:    [ SignalBas new ]
+        ifNotNil: [ (entree evaluate) not ].
+
+]
+
 { #category : 'accessing - structure variables' }
 Not >> state [
     ^ entree isNil

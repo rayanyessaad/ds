@@ -29,3 +29,9 @@ Composant >> shortDescription [
 
 
 ]
+
+{ #category : 'accessing' }
+Composant >> state [
+    ^ (self evaluate) value
+
+]

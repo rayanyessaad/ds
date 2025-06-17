@@ -28,6 +28,21 @@ Circuit class >> buildNamed: aString withComponents: aCollection [
 ]
 
 { #category : 'accessing' }
+Circuit >> evaluate [
+    | signaux |
+    signaux := vannes collect: [ :v |
+        | sig |
+        sig := v evaluate.
+        Transcript
+            show: nom; show: ' - ';
+            show: v shortDescription; show: '  →  ';
+            show: sig value printString; cr.
+        sig ].
+    ^ signaux
+
+]
+
+{ #category : 'accessing' }
 Circuit >> initializeNamed: aString withComponents: aCollection [
     nom := aString.
 
