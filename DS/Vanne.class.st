@@ -12,6 +12,15 @@ Class {
 }
 
 { #category : 'accessing' }
+Vanne >> createBlElement [ [
+    blElement := BlElement new
+        image: (Form fromFileNamed: 'Vanne.png').
+    ^ blElement
+]
+
+]
+
+{ #category : 'accessing' }
 Vanne >> description [
     ^ self shortDescription
         , ' in: '

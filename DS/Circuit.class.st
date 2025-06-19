@@ -43,17 +43,18 @@ Circuit >> evaluate [
 ]
 
 { #category : 'accessing' }
-Circuit >> initializeNamed: aString withComponents: aCollection [
-    nom := aString.
-
-    "collection complète triée par id"
+Circuit >> initializeNamed: aString withComponents: aCollection [ "Configure un circuit"
+    nom := aString."Stocke nom du circuit"
+    "Transforme la collection reçue en OrderedCollection,  trie les comp via leur id croissant"
     composants := aCollection
                     asOrderedCollection
                     sort: [ :a :b | a id <= b id ].
 
-    "sous-collections"
+    "Récupère tous les interrupteurs présents dans la collection de composants"
     interrupteurs := composants select: [ :c | c isKindOf: Interrupteur ].
-    vannes        := composants select: [ :c | c isKindOf: Vanne ].
+
+    "Récupère toutes les vannes présentes dans la collection de composants"
+    vannes := composants select: [ :c | c isKindOf: Vanne ].
 
 ]
 

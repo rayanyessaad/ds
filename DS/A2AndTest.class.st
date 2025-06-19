@@ -6,7 +6,7 @@ Class {
 }
 
 { #category : 'accessing' }
-A2AndTest >> testTableVerite [ [
+A2AndTest >> testTableVerite [ 
     | i1 i2 andGate |
 
     "Interrupteurs"
@@ -31,5 +31,5 @@ A2AndTest >> testTableVerite [ [
     "1 1 → 1"
     i1 on.
     self assert: andGate state equals: true.
-]
+
 ]

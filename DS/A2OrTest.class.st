@@ -6,7 +6,7 @@ Class {
 }
 
 { #category : 'accessing' }
-A2OrTest >> testTableVerite [ [
+A2OrTest >> testTableVerite [ 
     | i1 i2 orGate |
 
     "Interrupteurs OFF"
@@ -31,5 +31,5 @@ A2OrTest >> testTableVerite [ [
     "1 1 → 1"
     i1 on.
     self assert: orGate state equals: true.
-]
+
 ]

@@ -6,7 +6,7 @@ Class {
 }
 
 { #category : 'accessing' }
-A2VanneTest >> testOuverture [ [
+A2VanneTest >> testOuverture [ 
     | sw v |
     sw := Interrupteur new.      "OFF → false"
     v  := Vanne new.
@@ -16,5 +16,5 @@ A2VanneTest >> testOuverture [ [
 
     sw on.
     self assert: v state equals: true.    "ouverte"
-]
+
 ]

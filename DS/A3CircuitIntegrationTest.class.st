@@ -16,7 +16,7 @@ Class {
 A3CircuitIntegrationTest >> setUp [
     "Construit exactement le circuit du sujet :"
 | orGate notGate andGate |
-[
+
     "Interrupteurs"
     i1 := Interrupteur new.
     i2 := Interrupteur new.
@@ -40,7 +40,7 @@ A3CircuitIntegrationTest >> setUp [
     circuit := Circuit
                  buildNamed: 'Test' 
                  withComponents: { i1. i2. security. orGate. notGate. andGate. valve }.
-]
+
 
 ]
 
@@ -56,7 +56,7 @@ A3CircuitIntegrationTest >> testCollections [
 { #category : 'tests' }
 A3CircuitIntegrationTest >> testComportementVanne [
     "La logique : (i1 OR i2) AND ¬security."
-[
+
     "Tous OFF  → vanne fermée"
     self assert: valve state equals: false.
 
@@ -67,5 +67,5 @@ A3CircuitIntegrationTest >> testComportementVanne [
     "Sécurité ON  → refermée"
     security on.
     self assert: valve state equals: false.
-]
+
 ]

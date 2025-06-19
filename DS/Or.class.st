@@ -10,6 +10,15 @@ Class {
 }
 
 { #category : 'accessing' }
+Or >> createBlElement [ [
+    blElement := BlElement new
+        image: (Form fromFileNamed: 'porte_or.png').
+    ^ blElement
+]
+
+]
+
+{ #category : 'accessing' }
 Or >> evaluate [
     | s1 s2 |
     s1 := entree1 ifNil:[ SignalBas new ] ifNotNil:[ entree1 evaluate ].

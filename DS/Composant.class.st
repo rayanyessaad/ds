@@ -14,6 +14,23 @@ Class {
 }
 
 { #category : 'accessing' }
+Composant >> blElement [ [
+    ^ blElement ifNil: [ self createBlElement ]   "crée au premier appel"
+]
+
+]
+
+{ #category : 'accessing' }
+Composant >> createBlElement [ [
+    "Par défaut : petit carré gris – sera surchargé."
+    blElement := BlElement new
+        background: Color veryLightGray;
+        extent: 40@40.
+    ^ blElement
+]
+]
+
+{ #category : 'accessing' }
 Composant >> id [
     ^ self hash.
 

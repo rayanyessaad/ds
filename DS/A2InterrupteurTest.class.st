@@ -6,14 +6,14 @@ Class {
 }
 
 { #category : 'accessing' }
-A2InterrupteurTest >> testEtatInitial [ [
+A2InterrupteurTest >> testEtatInitial [ 
     | i |
     i := Interrupteur new.
-    self assert: i state equals: false      "doit être OFF par défaut"]
+    self assert: i state equals: false      "doit être OFF par défaut"
 ]
 
 { #category : 'accessing' }
-A2InterrupteurTest >> testOnOff [ [
+A2InterrupteurTest >> testOnOff [ 
     | i |
     i := Interrupteur new.
 
@@ -22,5 +22,5 @@ A2InterrupteurTest >> testOnOff [ [
 
     i off.
     self assert: i state equals: false
-]
+
 ]

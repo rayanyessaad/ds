@@ -6,7 +6,7 @@ Class {
 }
 
 { #category : 'accessing' }
-A2NotTest >> testInverseSignal [ [
+A2NotTest >> testInverseSignal [ 
     | sw notGate |
 
     sw := Interrupteur new.          "OFF → false"
@@ -23,5 +23,6 @@ A2NotTest >> testInverseSignal [ [
     "retour à 0 → 1"
     sw off.
     self assert: notGate state equals: true.
-]
+
+
 ]

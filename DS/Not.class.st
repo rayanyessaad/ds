@@ -12,6 +12,19 @@ Class {
 }
 
 { #category : 'accessing' }
+Not >> createBlElement [ [
+    | img |
+		img:=entree
+        ifTrue:  [ 'interrupteur_close.png' ]
+        ifFalse: [ 'interrupteur_open.png' ].
+
+    blElement := BlElement new image: img.
+    ^ blElement
+]
+
+]
+
+{ #category : 'accessing' }
 Not >> description [
     ^ self shortDescription
         , ' in: '
