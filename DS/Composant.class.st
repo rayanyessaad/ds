@@ -6,7 +6,8 @@ Class {
 	#name : 'Composant',
 	#superclass : 'Object',
 	#instVars : [
-		'id'
+		'id',
+		'blElement'
 	],
 	#category : 'DS',
 	#package : 'DS'
